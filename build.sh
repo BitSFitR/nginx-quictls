@@ -38,7 +38,7 @@ auto/configure --prefix=/etc/nginx --sbin-path=/usr/local/bin/nginx \
 --without-http_referer_module --without-http_split_clients_module \
 --without-http_scgi_module --without-http_ssi_module \
 --without-http_upstream_hash_module --without-http_upstream_ip_hash_module \
---without-http_upstream_keepalive_module --without-http_upstream_least_conn_module \
+--without-http_upstream_least_conn_module \
 --without-http_upstream_random_module \
 --with-openssl=modules/openssl \
 --with-openssl-opt="enable-ec_nistp_64_gcc_128 enable-ktls enable-weak-ssl-ciphers" \
