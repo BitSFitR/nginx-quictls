@@ -18,7 +18,7 @@ git clone --depth 1 https://github.com/openresty/headers-more-nginx-module > /de
 git clone --depth 1 https://github.com/arut/nginx-rtmp-module > /dev/null 2>&1
 echo Build nginx.
 cd ..
-auto/configure --prefix=/etc/nginx --sbin-path=/usr/sbin/nginx \
+auto/configure --prefix=/etc/nginx --sbin-path=/usr/local/bin/nginx \
 --add-module=modules/ngx_brotli --add-module=modules/ngx_http_geoip2_module \
 --add-module=modules/headers-more-nginx-module --add-module=modules/nginx-rtmp-module \
 --conf-path=/etc/nginx/nginx.conf \
@@ -32,7 +32,7 @@ auto/configure --prefix=/etc/nginx --sbin-path=/usr/sbin/nginx \
 --with-file-aio --with-threads --with-pcre-jit --with-http_sub_module \
 --with-http_ssl_module --with-http_v2_module --with-http_v3_module \
 --without-select_module --without-poll_module \
---without-http_access_module --without-http_autoindex_module \
+--without-http_autoindex_module \
 --without-http_browser_module --without-http_charset_module \
 --without-http_empty_gif_module --without-http_limit_conn_module \
 --without-http_memcached_module --without-http_mirror_module \
