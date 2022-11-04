@@ -46,6 +46,7 @@ CC=clang auto/configure --prefix=/etc/nginx --sbin-path=/usr/local/bin/nginx \
 make -j$(nproc) > /dev/null 2>&1
 cp objs/nginx ..
 cd ..
+strip -s nginx
 hash=$(ls -l nginx | awk '{print $5}')
 patch=$(cat /github/workspace/patch)
 minor=$(cat /github/workspace/minor)
