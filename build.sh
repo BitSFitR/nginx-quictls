@@ -4,7 +4,7 @@ echo Install dependencies.
 apt-get update > /dev/null 2>&1
 apt-get install --allow-change-held-packages --allow-downgrades --allow-remove-essential \
 -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold -fy \
-cmake clang curl git libmaxminddb-dev libpcre2-dev mercurial zlib1g-dev > /dev/null 2>&1
+cmake curl git libmaxminddb-dev libpcre2-dev mercurial zlib1g-dev > /dev/null 2>&1
 echo Fetch nginx-quic source code.
 hg clone -b quic https://hg.nginx.org/nginx-quic > /dev/null 2>&1
 echo Fetch quictls source code.
@@ -18,7 +18,7 @@ git clone --depth 1 https://github.com/openresty/headers-more-nginx-module > /de
 git clone --depth 1 https://github.com/arut/nginx-rtmp-module > /dev/null 2>&1
 echo Build nginx.
 cd ..
-CC=clang auto/configure --prefix=/etc/nginx --sbin-path=/usr/local/bin/nginx \
+auto/configure --prefix=/etc/nginx --sbin-path=/usr/local/bin/nginx \
 --add-module=modules/ngx_brotli --add-module=modules/ngx_http_geoip2_module \
 --add-module=modules/headers-more-nginx-module --add-module=modules/nginx-rtmp-module \
 --conf-path=/etc/nginx/nginx.conf \
